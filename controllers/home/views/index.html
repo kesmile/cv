@@ -1,0 +1,237 @@
+{% extends '../../../views/layout.html' %}
+{% block stylesheets%}
+    <link rel="stylesheet" href="/stylesheets/iconFont.min.css">
+        <link rel="stylesheet" href="/stylesheets/foundation.min.css" />
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <script src="/js/vendor/modernizr.js"></script>
+        <style>
+                .typed-cursor{
+            opacity: 1;
+            font-weight: 100;
+            font-style: normal !important;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            -ms-animation: blink 0.7s infinite;
+            -o-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        </style>
+{% endblock%}
+{% block body%}
+    <div id="portada" class="portada">
+            <div class="logo">
+                <div class="img-container">
+                        <img id="logo" src="/img/logo-s1.png" />
+                </div>
+                
+                <div class="title-container">
+                    <span class="title">KELVI PADILLA</span>
+                </div>
+                
+            </div>
+            
+            <nav class="menu">
+                <ul>
+                    <li><a id="s1" href="#lenguajes">Acerca</a></li>
+                    <li><a id="s2" href="#portafolio">Portafolio</a></li>
+                    <li><a  href="http://kesmile.wordpress.com">Blog</a></li>
+                    <li><a id="s4" href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div id="arrow-down">
+                <i class="icon-arrow-down-5" ></i>
+            </div>
+    </div> 
+        
+        
+        <div id="lenguajes" class="lenguajes">
+                        <div class="row">
+                            <div id="leng-titulo" class="large-12 columns">
+                                <h1>Acerca de mi</h1> 
+                            </div>
+                            <div class="side-leng large-4 columns">
+                                <img src="/img/icon-html5.png" />
+                                <div class="title-side">
+                                    HTML 5
+                                </div>
+                                <div class="text-side">
+                                    Html5, javascript, css3, less, jquery, librerias y plugins.
+                                </div>
+                            </div>
+                            
+                            <div class="side-leng large-4 columns">
+                                <img src="/img/icon-android.png" />
+                                <div class="title-side">
+                                    ANDROID
+                                </div>
+                                <div class="text-side">
+                                    Java EE, java android, gradle, maven, android studio, librerias de terceros.
+                                </div>
+                            </div>
+                            
+                            <div class="side-leng large-4 columns">
+                                <img src="/img/icon-nosql.png" />
+                                <div class="title-side">
+                                    BASE DE DATOS
+                                </div>
+                                <div class="text-side">
+                                    Mysql, postgreesql, mariadb, mongodb, couchdb, nosql.
+                                </div>
+                            </div>
+                            
+                            <div class="side-leng large-4 columns">
+                                <img src="/img/icon-php.png" />
+                                <div class="title-side">
+                                    PHP
+                                </div>
+                                <div class="text-side">
+                                    MVC codeigniter, symphony2, doctrine, twig, laravel, composer, soap, slim.
+                                </div>
+                            </div>
+                            
+                            <div class="side-leng large-4 columns">
+                                <img src="/img/icon-pics.png" />
+                                <div class="title-side">
+                                    ELECTRONICA
+                                </div>
+                                <div class="text-side">
+                                    Arduino, Microcontroladores atmel, pics, electronica analoga, modulos digitales, kicad, proteus
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+        </div>
+        
+        <div id="about" class="about-container">
+                 <div class="row">
+                            <div class="about-frase" class="large-12 columns">
+                                <div class="about-text">
+                                     <span id="typed" style="white-space:pre;"></span>
+                                </div>
+                                <div id="autor" class="about-author">
+                                    Alan Turing
+                                </div>
+                            </div>
+                         
+                </div>
+        </div>
+        
+        <!-- portafolio -->
+        <div id="portafolio" class="portafolio">
+            <div class="row">
+                    <div class="large-12 columns">
+                        <div class="portafolio-title">
+                            PORTAFOLIO
+                        </div>
+                    </div> 
+                    {% for item in portafolio %}
+                        <div class="portafolio-item left large-4 columns">
+                            <a href="/page/{{ item.url }}" >
+                                <img src="/img/portafolio/{{ item.imagen }}" />
+                                <div class="title-portafolio">{{ item.titulo }}</div>
+                            </a>
+                        </div>
+                    {%endfor%}
+            </div>
+        </div>
+        
+        <!-- contactanos -->
+        <div id="contacto" class="contacto">
+            <div class="row">
+                    <div class="contacto-title large-12 columns">
+                        <h2>CONTACTO</h2>
+                    </div>
+                    <div class="contacto-info large-4 columns">
+                        <div id="contacto-image">
+                                <img src="/img/me.jpg" />
+                                <span>Kelvi Padilla</span>
+                        </div>
+                        <p id="contact-moreinfo">
+                            kelvipadilla@gmail.com</br>
+                            Desarrollador</br>
+                            cel 4744828
+                        </p>
+                    </div>
+                    <div class="form large-6 columns">
+                        <form>
+                            <div class="row">
+                                <div class="right large-9 columns">
+                                  <label>Nombre
+                                    <input type="text"  />
+                                  </label>
+                                </div>
+                                <div class="right large-9 columns">
+                                  <label>Email
+                                    <input type="text"  />
+                                  </label>
+                                </div>
+                                <div class="right large-9 columns">
+                                  <label>Mensaje
+                                    <textarea rows="4"></textarea>
+                                  </label>
+                                </div>
+                                <div class="right large-9 columns">
+                                  <button class="tiny">Enviar</button>
+                                </div>
+                          </div>
+                        </form>
+                    </div>
+            </div>
+        </div> 
+        <footer>
+            Optimizado con node.js, derechos reservados 2015
+        </footer>
+{% endblock%}
+{% block javascripts%}
+            <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/typed.js"></script>
+<script>
+          $(document).foundation({
+                orbit: {
+                            animation: 'slide', // Sets the type of animation used for transitioning between slides, can also be 'fade'
+                            timer_speed: 30000, // Sets the amount of time in milliseconds before transitioning a slide
+                            pause_on_hover: true, // Pauses on the current slide while hovering
+                            resume_on_mouseout: false, // If pause on hover is set to true, this setting resumes playback after mousing out of slide
+                            next_on_click: true, // Advance to next slide on click
+                            animation_speed: 500, // Sets the amount of time in milliseconds the transition between slides will last
+                            stack_on_small: false,
+                            navigation_arrows: true,
+                            slide_number: false,
+                            slide_number_text: 'of',
+                            bullets: false,
+                            next_class: 'next-slide', // Class name given to the next button
+                            prev_class: 'prev-slide',
+                            
+                        }
+            
+            });
+</script>
+        <script src="/js/myscripts.js"></script>
+{% endblock%}

@@ -1,0 +1,59 @@
+{% extends '../../../views/layout.html' %}
+{% block stylesheets%}
+    <link rel="stylesheet" href="/stylesheets/iconFont.min.css">
+        <link rel="stylesheet" href="/stylesheets/foundation.min.css" />
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <script src="/js/vendor/modernizr.js"></script>
+{% endblock%}
+{% block body%}
+        <div class="page">
+            <div class="row">
+                    <div id="page-info" class="large-9 columns">
+                        <div class="page-title">
+                            {{title}}
+                        </div>
+                        <div id="page-info-data">
+                        {% include content %}
+                        </div>
+                    </div>
+                    <div id="sidebar" class="large-3 columns">
+                        <a href="{{ site }}" target="_blank">Visitar sitio</a>
+                       <!-- <div id="sidebar-meta">
+                            <h3>Leguajes</h3>
+                            <ul>
+                                <li>data</li>
+                            </ul>
+                        </div>-->
+                    </div>
+            </div>
+        </div>
+        <footer>
+            Optimizado con node.js, derechos reservados 2015
+        </footer>
+{% endblock%}
+{% block javascripts%}
+            <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/foundation.min.js"></script>
+<script>
+          $(document).foundation({
+                orbit: {
+                            animation: 'slide', // Sets the type of animation used for transitioning between slides, can also be 'fade'
+                            timer_speed: 3000, // Sets the amount of time in milliseconds before transitioning a slide
+                            pause_on_hover: true, // Pauses on the current slide while hovering
+                            resume_on_mouseout: false, // If pause on hover is set to true, this setting resumes playback after mousing out of slide
+                            next_on_click: true, // Advance to next slide on click
+                            animation_speed: 500, // Sets the amount of time in milliseconds the transition between slides will last
+                            stack_on_small: true,
+                            navigation_arrows: true,
+                            slide_number: true,
+                            slide_number_text: 'of',
+                            bullets: true,
+                            next_class: 'next-slide', // Class name given to the next button
+                            prev_class: 'prev-slide',
+                            
+                        }
+            
+            });
+</script>
+        <script src="/js/myscripts.js"></script>
+{% endblock%}
