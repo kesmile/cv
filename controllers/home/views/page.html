@@ -8,7 +8,10 @@
 {% block body%}
         <div class="page">
             <div class="row">
-                    <div id="page-info" class="large-9 columns">
+                <!--<div id="page-logo" class="large-12 columns">
+                    <img src="/img/logo_o.png" />
+                </div>-->
+                    <div id="page-info" class="large-8 columns">
                         <div class="page-title">
                             {{title}}
                         </div>
@@ -18,12 +21,22 @@
                     </div>
                     <div id="sidebar" class="large-3 columns">
                         <a href="{{ site }}" target="_blank">Visitar sitio</a>
-                       <!-- <div id="sidebar-meta">
-                            <h3>Leguajes</h3>
+                        <div class="sidebar-meta">
+                            <h4>Leguajes</h4>
                             <ul>
-                                <li>data</li>
+                                {%for lenguaje in lenguajes%}
+                                    <li>{{lenguaje.data}}</li>
+                                {% endfor %}
                             </ul>
-                        </div>-->
+                        </div>
+                        {% if adicional %}
+                            <div class="sidebar-meta">
+                                <h4>Adicional</h4>
+                                {% for datos in adicional%}
+                                    {{datos.data}} </br>
+                                {% endfor%}
+                            </div>
+                        {% endif%}
                     </div>
             </div>
         </div>

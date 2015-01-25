@@ -18,7 +18,8 @@ router.get('/page/:url?', function(req, res) {
   var url = req.params.url;
   if (typeof(url) !== 'undefined'){
     var content = searchByKey(data,url);
-    res.render('page', { title: content.title, content: content.content, site: content.site });
+    res.render('page', { title: content.title, content: content.content, site: content.site,
+                         lenguajes : content.lenguajes, adicional: content.adicional});
   }else{
     res.render('index', { title: 'Desde controlador principal', url: 'work' });
     

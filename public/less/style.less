@@ -222,7 +222,7 @@
     position: absolute;
     top: 43%;
     margin-top: -25px;
-    width: 50px;
+    width: 30px;
     height: 97px;
     right: 10px;
     z-index: 10;
@@ -270,6 +270,7 @@
 		margin-bottom: 5%;
 		position: relative;
 		.title-portafolio{
+		    display: inline;
 		    position: absolute;
 		    width: 300px;
 		    top: 42%;
@@ -278,9 +279,12 @@
 		    text-transform: uppercase;
 		    font-family: 'Raleway', sans-serif;
 		    font-size: 18px;
-		    background: #363635;
-		    color: #fff;
 		    
+		    color: #fff;
+		    span{
+		      background: rgb(26, 188, 156);
+		      padding: 8px;
+		    }
 		}
 	}
 	.portafolio-item-hover{
@@ -363,15 +367,19 @@ footer{
  *	Page
  */
 .page{
+	padding-top: 5%;
 	width: 100%;
 	min-height: 100%;
-	padding-top: 5%;
+	#page-logo{
+	  margin-bottom: 5%;
+	}
 	.page-title{
+		
 		font-size: 40px;
-		//background: rgba(69,74,164,0.95);
+		background: #0171bf;
 		//font-family: 'Raleway-Regular' !important;
 		font-family: 'Raleway', sans-serif;
-		color: #000;
+		color: #fff;
 		width: auto;
 		padding-left: 15px;
 		padding-right: 15px;
@@ -401,9 +409,12 @@ footer{
 	  background: rgba(69,74,164,0.80);
 	}
       }
-      #sidebar-meta{
+      .sidebar-meta{
 	margin-top: 30px;
       }
     }
 }
-
+.orbit-container {
+  margin: 0 auto;
+  width: 91%;
+}

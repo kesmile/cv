@@ -29,7 +29,7 @@ $(document).ready(function(){
      */
     var i = 0;
       $("#typed").typed({
-            strings: ['"EL verdadero Programador no llora cuando nace"', "Hazlo simple, tan simple como sea posible,</br> pero no más.", "Lo siento, Dave. No puedo hacer eso.", "Dios es real, a menos que sea declarado entero."],
+            strings: ['EL verdadero programador no llora cuando nace', "Hazlo simple, tan simple como sea posible,</br> pero no más.", "Lo siento, Dave. No puedo hacer eso", "Los programadores de verdad no documentan. </br>Si fué difícil de escribir, </br> debe ser difícil de entender"],
             typeSpeed: 30,
             backDelay: 500,
             loop: true,
@@ -51,7 +51,7 @@ $(document).ready(function(){
     */
          $('.portafolio-item').hover(function(){
                   $(this).addClass('portafolio-item-hover');
-                  $(this).children('a').find('img').stop().animate({"opacity": 0.5});
+                  $(this).children('a').find('img').stop().animate({"opacity": 0.4});
                },
                function() {
                   $(this).removeClass('portafolio-item-hover');
