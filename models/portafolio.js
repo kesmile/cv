@@ -9,7 +9,8 @@ var data = [
     {url:'catalogo', titulo: 'Tienda de perfumes', imagen : 'catalogo/thumb.png'},
     {url:'bpo', titulo: 'BPO Innovations', imagen : 'bpo/thumb.png'},
     {url:'imporex', titulo: 'Imporex 95', imagen : 'imporex/thumb.png'},
-    
-    
+    {url:'cm', titulo: 'cm', imagen : 'cm/dashboard/thumb.png'},
+
+
 ]
 module.exports = data;
